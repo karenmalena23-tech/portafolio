@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Karen</title>
+    <!-- Fuentes estilo editorial (Playfair Display para títulos y Inter para texto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FDFBF7;
+            --text-color: #2C2C2C;
+            --accent-color: #C05621; /* Terracota */
+            --card-bg: #FFFFFF;
+            --border-color: #E2D9CE;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-color);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-card, .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .project-card {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Karen</h1>
+        <p>Estudiante de Ingeniería en Ciencias de la Computación. Me gusta escuchar música y aprender cada día más sobre programación, con un gran interés en enfocarme hacia los sistemas ocupados en ciberseguridad.</p>
+    </header>
+
+    <main>
+        <!-- Sección: Lo que te interesa -->
+        <section>
+            <h2>Lo que me interesa</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Ciberseguridad</h3>
+                    <p>Mi mayor interés profesional. Me apasiona investigar cómo proteger los sistemas de amenazas digitales.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Criminología y Psicología Forense</h3>
+                    <p>Un campo que me fascina estudiar en paralelo para entender el comportamiento y los patrones lógicos.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Fútbol</h3>
+                    <p>Disfruto practicarlo y jugarlo como una excelente actividad para desconectar y mantener el equilibrio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Tus proyectos -->
+        <section>
+            <h2>Mis Proyectos</h2>
+
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <h3>Proyecto 1: Mi Lista de Tareas</h3>
+                <p><strong>Enlace:</strong> <a href="https://karenmalena23-tech.github.io/mi_lista_tareas/" target="_blank">Ver sitio publicado</a></p>
+                <p><strong>Qué hace y para quién es:</strong> Apto para estudiantes o cualquier persona que necesite organizar sus tareas del día a día. Permite agregar, completar y eliminar tareas.</p>
+                <p><strong>Cómo está hecho:</strong> HTML creó la estructura, CSS diseñó la página y JavaScript agregó las funciones interactivas para agregar, marcar y borrar tareas en el navegador.</p>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <h3>Proyecto 2: La Isla del Gran Tesoro</h3>
+                <p><strong>Enlace:</strong> <a href="https://detectives-en-duelo.vercel.app/" target="_blank">Ver en Vercel</a></p>
+                <p><strong>Qué hace y para quién es:</strong> Es un juego multijugador 2D en tiempo real diseñado para dos usuarios que quieren competir en una carrera pirata, recoger tesoros y superar obstáculos.</p>
+                <p><strong>Cómo está hecho:</strong> Desarrollado con web y game development, integrando salas privadas, saltos fluidos y un salón de fama global de victorias mediante Supabase y JavaScript en tiempo real.</p>
+            </div>
+        </section>
+
+        <!-- Sección: Sobre este sitio -->
+        <section>
+            <h2>Sobre este sitio</h2>
+            <p>Elegí un estilo editorial cálido con tonos marfil y acentos terracota para priorizar una lectura limpia y cómoda, alejándome del clásico fondo oscuro y dándole un toque personal y ordenado a la presentación de mis proyectos.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Portafolio personal de Karen — Creado para la carrera de Ciencias de la Computación.</p>
+    </footer>
+
+</body>
+</html>
