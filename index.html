@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karen Lema — Portafolio</title>
-    <!-- Fuentes editoriales y modernas -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Fuentes editoriales sofisticadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #FBF9F5;
-            --card-bg: #FFFFFF;
-            --text-main: #2D2A26;
-            --text-muted: #6B655D;
-            --accent: #A34E36; /* Terracota cálido */
-            --accent-light: #F4ECE8;
-            --border: #E8E2D9;
-            --radius: 16px;
+            --bg-color: #F4EFEB; /* Fondo cálido tipo pergamino suave */
+            --card-bg: #FFFDF9;
+            --text-main: #23201D;
+            --text-muted: #6B6158;
+            --accent: #9E3D22;   /* Terracota intenso y elegante */
+            --accent-light: #F2E3DE;
+            --border: #DED4CB;
+            --shadow: 0 12px 35px rgba(45, 42, 38, 0.07);
+            --radius: 20px;
         }
 
         * {
@@ -29,47 +30,60 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.7;
-            padding: 2.5rem 1rem;
+            padding: 3rem 1rem;
+            background-image: radial-gradient(#E8DDD0 1px, transparent 1px);
+            background-size: 24px 24px;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Cabecera con Avatar */
+        /* Cabecera Editorial con estilo de revista */
         header {
             background: var(--card-bg);
-            border: 1px solid var(--border);
+            border: 2px solid var(--border);
             border-radius: var(--radius);
-            padding: 3rem 2rem;
+            padding: 3.5rem 2rem;
             text-align: center;
             margin-bottom: 2.5rem;
-            box-shadow: 0 10px 30px rgba(45, 42, 38, 0.04);
+            box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
         }
 
-        /* Pequeño detalle floral/decorativo en esquinas */
+        /* Elementos decorativos florales y artísticos en la cabecera */
         header::before {
-            content: "✦ ❀ ✦";
+            content: "❀ 🌿 ✦ 🌿 ❀";
             position: absolute;
             top: 15px;
-            right: 20px;
+            left: 0;
+            right: 0;
             color: var(--accent);
-            font-size: 0.9rem;
-            opacity: 0.6;
-            letter-spacing: 4px;
+            font-size: 0.95rem;
+            opacity: 0.7;
+            letter-spacing: 12px;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--accent), #D48C72, var(--accent));
         }
 
         .avatar-container {
-            width: 130px;
-            height: 130px;
-            margin: 0 auto 1.25rem auto;
+            width: 140px;
+            height: 140px;
+            margin: 1.5rem auto 1.25rem auto;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid var(--accent-light);
-            box-shadow: 0 6px 15px rgba(163, 78, 54, 0.15);
+            border: 4px solid var(--accent-light);
+            box-shadow: 0 8px 25px rgba(158, 61, 34, 0.2);
         }
 
         .avatar-container img {
@@ -80,81 +94,91 @@
 
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
+            font-size: 3rem;
             color: var(--text-main);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
 
         .badge {
             display: inline-block;
             background-color: var(--accent-light);
             color: var(--accent);
-            padding: 0.35rem 1.1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1rem;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         header p {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto;
         }
 
-        /* Secciones */
+        /* Secciones tipo bloques */
         section {
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 2.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 6px 25px rgba(45, 42, 38, 0.03);
+            box-shadow: var(--shadow);
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
+            font-size: 1.9rem;
             color: var(--text-main);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         h2::after {
             content: "";
             flex: 1;
-            height: 1px;
+            height: 2px;
             background: var(--border);
             margin-left: 1rem;
         }
 
-        /* Intereses Grid con Tarjetas */
+        /* Intereses Grid con Emojis y Tarjetas con relieve */
         .interests-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
         }
 
         .interest-card {
             background: var(--bg-color);
             border: 1px solid var(--border);
-            padding: 1.5rem;
-            border-radius: 12px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            padding: 1.8rem 1.5rem;
+            border-radius: 14px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .interest-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(45, 42, 38, 0.05);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(158, 61, 34, 0.1);
+            background: #FFFDF9;
+        }
+
+        .interest-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: inline-block;
         }
 
         .interest-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--accent);
             margin-bottom: 0.5rem;
         }
@@ -164,18 +188,21 @@
             color: var(--text-muted);
         }
 
-        /* Proyectos */
+        /* Proyectos Estilizados */
         .project-card {
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
+            border-radius: 14px;
+            padding: 2.2rem;
             margin-bottom: 2rem;
             background: var(--bg-color);
-            transition: border-color 0.2s;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .project-card:hover {
             border-color: var(--accent);
+            background: #FFFDF9;
+            box-shadow: 0 8px 20px rgba(45, 42, 38, 0.05);
         }
 
         .project-card:last-child {
@@ -184,7 +211,7 @@
 
         .project-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--text-main);
             margin-bottom: 1rem;
         }
@@ -194,6 +221,7 @@
             gap: 0.75rem;
             margin-top: 1rem;
             font-size: 0.95rem;
+            color: var(--text-muted);
         }
 
         .project-details strong {
@@ -204,115 +232,120 @@
             display: inline-block;
             background-color: var(--accent);
             color: #FFF;
-            padding: 0.6rem 1.3rem;
-            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.9rem;
-            margin-top: 1.2rem;
-            transition: opacity 0.2s, transform 0.1s;
+            margin-top: 1.5rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(158, 61, 34, 0.25);
         }
 
         .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
+            background-color: #7E2F19;
+            transform: translateY(-2px);
             text-decoration: none;
             color: #FFF;
         }
 
-        /* Sobre este sitio */
+        /* Sección Sobre este sitio (Justificación de Tipografía) */
         .about-site {
             font-style: italic;
             color: var(--text-muted);
             background: var(--accent-light);
-            padding: 1.5rem;
-            border-left: 4px solid var(--accent);
-            border-radius: 0 12px 12px 0;
+            padding: 1.8rem;
+            border-left: 5px solid var(--accent);
+            border-radius: 0 14px 14px 0;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             font-size: 0.9rem;
             color: var(--text-muted);
+            font-family: 'Playfair Display', serif;
         }
 
         @media (max-width: 600px) {
             body { padding: 1rem 0.5rem; }
-            header { padding: 2rem 1rem; }
+            header { padding: 2.5rem 1rem; }
             section { padding: 1.5rem; }
-            header h1 { font-size: 2.2rem; }
+            header h1 { font-size: 2.3rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Cabecera / Quién eres con Avatar -->
+        <!-- Cabecera con Avatar y motivos florales -->
         <header>
             <div class="avatar-container">
                 <img src="avatar.png" alt="Avatar de Karen">
             </div>
-            <span class="badge">Ingeniería & Educación</span>
+            <span class="badge">Ciencias de la Computación</span>
             <h1>Karen Lema</h1>
-            <p>Estudiante de Ingeniería en Ciencias de la Computación. Apasionada por la música, la creación de software y con la firme meta de especializarme en sistemas de ciberseguridad.</p>
+            <p>Estudiante de ingeniería apasionada por la creación de software, la lógica analítica y con la firme meta de especializarme en ciberseguridad.</p>
         </header>
 
-        <!-- Lo que te interesa -->
+        <!-- Lo que te interesa con Emojis -->
         <section>
             <h2>Lo que me interesa</h2>
             <div class="interests-grid">
                 <div class="interest-card">
+                    <div class="interest-icon">🛡️</div>
                     <h3>Ciberseguridad</h3>
-                    <p>Mi principal enfoque técnico. Me fascina entender cómo proteger infraestructuras digitales contra vulnerabilidades.</p>
+                    <p>Mi enfoque principal. Me fascina entender las defensas y la protección de infraestructuras digitales.</p>
                 </div>
                 <div class="interest-card">
+                    <div class="interest-icon">🔍</div>
                     <h3>Criminología</h3>
-                    <p>Apasionada por la psicología forense y el análisis de patrones lógicos de comportamiento.</p>
+                    <p>Apasionada por la psicología forense y el análisis lógico de patrones y conductas.</p>
                 </div>
                 <div class="interest-card">
+                    <div class="interest-icon">⚽</div>
                     <h3>Fútbol</h3>
                     <p>Disfruto practicarlo activamente como un espacio clave para mantener el equilibrio y la energía.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Tus proyectos -->
+        <!-- Mis Proyectos con detalles completos -->
         <section>
             <h2>Mis Proyectos</h2>
 
             <!-- Proyecto 1 -->
             <div class="project-card">
-                <h3>Proyecto 1: Mi Lista de Tareas</h3>
+                <h3>📝 Proyecto 1: Mi Lista de Tareas</h3>
                 <div class="project-details">
-                    <p><strong>Para quién es y qué hace:</strong> Diseñado para estudiantes o cualquier persona que necesite organizar su rutina diaria. Permite agregar, completar y eliminar tareas de manera fluida.</p>
-                    <p><strong>Cómo está hecho:</strong> HTML estructuró el contenido, CSS le dio diseño editorial y JavaScript maneja la interactividad directamente en el navegador. Se publica en GitHub Pages y no almacena datos de forma permanente al recargar.</p>
+                    <p><strong>Para quién es y qué hace:</strong> Diseñado para estudiantes y personas que buscan organizar su rutina diaria añadiendo, completando y eliminando tareas de forma fluida.</p>
+                    <p><strong>Cómo está hecho:</strong> Estructurado con HTML, diseñado con CSS editorial y lógica en JavaScript ejecutada directamente en el navegador. Publicado en GitHub Pages (sin base de datos permanente).</p>
                 </div>
                 <a href="https://karenmalena23-tech.github.io/mi_lista_tareas/" class="btn" target="_blank">Ver Proyecto 1 Publicado</a>
             </div>
 
             <!-- Proyecto 2 -->
             <div class="project-card">
-                <h3>Proyecto 2: La Isla del Gran Tesoro</h3>
+                <h3>🏴‍☠️ Proyecto 2: La Isla del Gran Tesoro</h3>
                 <div class="project-details">
-                    <p><strong>Para quién es y qué hace:</strong> Un juego multijugador 2D en tiempo real para dos usuarios que compiten en una carrera pirata llena de tesoros y obstáculos.</p>
-                    <p><strong>Cómo está hecho:</strong> Desarrollado como aplicación web con salas privadas y un salón de fama global. Utiliza Supabase para guardar los datos y la base de récords, y JavaScript ejecutándose en el navegador para la sincronización. Publicado en Vercel.</p>
+                    <p><strong>Para quién es y qué hace:</strong> Un juego multijugador web en tiempo real para dos usuarios que compiten resolviendo retos en una divertida aventura pirata.</p>
+                    <p><strong>Cómo está hecho:</strong> Aplicación web con salas privadas y salón de fama. Utiliza Supabase para persistencia de datos, JavaScript en el cliente para la dinámica interactiva y está alojado en Vercel.</p>
                 </div>
                 <a href="https://detectives-en-duelo.vercel.app/" class="btn" target="_blank">Ver en Vercel</a>
             </div>
         </section>
 
-        <!-- Sobre este sitio -->
+        <!-- Sobre este sitio y Elección de Tipografía -->
         <section>
             <h2>Sobre este sitio</h2>
             <div class="about-site">
-                <p>“Elegí este estilo editorial cálido con tonos marfil y acentos terracota inspirados en papel impreso y diseño de revistas, buscando priorizar una lectura sumamente limpia, elegante y con identidad propia frente a las interfaces oscuras convencionales.”</p>
+                <p><strong>Diseño y Tipografía:</strong> “Elegí un estilo editorial cálido tipo 'Paper & Ink' combinando la tipografía <em>Playfair Display</em> en títulos para evocar la elegancia de una revista clásica de autor, con <em>Plus Jakarta Sans</em> en los cuerpos de texto para garantizar una lectura limpia y moderna. Todo ello acompañado de una paleta terracota y detalles florales para reflejar identidad y cercanía.”</p>
             </div>
         </section>
 
         <footer>
-            <p>Portafolio personal de Karen — Desarrollado para Ciencias de la Computación.</p>
+            <p>✦ Portafolio personal de Karen Lema — 2026 ✦</p>
         </footer>
     </div>
 
